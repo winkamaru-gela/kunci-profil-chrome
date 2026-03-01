@@ -37,8 +37,11 @@ function periksaDanAlihkan(tabId, url) {
         if (result.isLocked) {
             const urlKunci = chrome.runtime.getURL("kunci.html");
             
-            // Jika tab yang dibuka BUKAN halaman kunci
-            if (!url.startsWith(urlKunci) && !url.startsWith("devtools://")) {
+            // PERBAIKAN: Tambahkan pengecualian untuk 'chrome-extension://'
+            // Jika tab yang dibuka BUKAN halaman kunci, BUKAN devtools, dan BUKAN dari ekstensi lain
+            if (!url.startsWith(urlKunci) && 
+                !url.startsWith("devtools://") && 
+                !url.startsWith("chrome-extension://")) {
                 
                 // Cek apakah tab kunci sudah ada yang terbuka?
                 chrome.tabs.query({ url: urlKunci }, function(tabs) {
