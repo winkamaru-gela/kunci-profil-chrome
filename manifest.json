@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Kunci Profil Chrome",
+  "version": "3.0",
+  "description": "Mengunci profil Chrome dan memiliki fitur ubah sandi.",
+  "permissions": ["storage", "tabs"],
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "background.js"
+  }
+}

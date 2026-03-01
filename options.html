@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Pengaturan Sandi Profil</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f9; }
+        .container { max-width: 400px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h2 { text-align: center; color: #333; }
+        label { font-weight: bold; margin-top: 10px; display: block; color: #555; }
+        input { width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+        #status-msg { text-align: center; margin-top: 15px; font-weight: bold; }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Ubah Sandi Profil</h2>
+        
+        <label for="old-password">Sandi Lama:</label>
+        <input type="password" id="old-password" placeholder="Sandi saat ini (default: admin)">
+        
+        <label for="new-password">Sandi Baru:</label>
+        <input type="password" id="new-password" placeholder="Masukkan sandi baru">
+        
+        <button id="save-btn">Simpan Sandi Baru</button>
+        <p id="status-msg"></p>
+    </div>
+
+    <script src="options.js"></script>
+</body>
+</html>
