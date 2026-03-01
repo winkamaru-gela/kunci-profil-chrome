@@ -29,9 +29,11 @@ Ekstensi ini dirancang sebagai "Gembok Pagar Depan" untuk melindungi privasi dar
 ## 📸 Tampilan Ekstensi
 
 **1. Tampilan Layar Kunci**
+
 <img src="assets/layar-kunci.png" width="600">
 
 **2. Halaman Pengaturan Sandi**
+
 <img src="assets/pengaturan.png" width="600">
 
 ---
