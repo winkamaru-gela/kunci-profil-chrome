@@ -26,5 +26,13 @@ Karena ekstensi ini bersifat privat dan tidak diunggah ke Chrome Web Store, Anda
 ## ⚠️ Catatan Keamanan Tambahan
 Ekstensi ini dirancang sebagai "Gembok Pagar Depan" untuk melindungi privasi dari pengguna kasual/awam. Seseorang dengan pemahaman teknis IT yang tinggi mungkin masih bisa melewati ini menggunakan fitur *Task Manager* bawaan Chrome, menonaktifkannya dari *Safe Mode*, atau memodifikasi *Local Storage*.
 
+## 📸 Tampilan Ekstensi
+
+**1. Tampilan Layar Kunci**
+<img src="assets/layar-kunci.png" width="600">
+
+**2. Halaman Pengaturan Sandi**
+<img src="assets/pengaturan.png" width="600">
+
 ---
 *Dibuat untuk menjaga privasi dan kenyamanan selancar sehari-hari.*
