@@ -2,12 +2,12 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Profil Terkunci</title>
+    <title>Profil Chrome ini Terkunci</title>
     <style>
         body {
             background-color: #1e1e1e;
             color: white;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -19,51 +19,106 @@
         .container {
             background-color: #2d2d2d;
             padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             text-align: center;
-            width: 350px;
+            width: 360px;
+            border: 1px solid #3d3d3d;
         }
         input {
             width: 100%;
             padding: 12px;
             font-size: 16px;
             margin-bottom: 15px;
-            border-radius: 5px;
-            border: none;
+            border-radius: 8px;
+            border: 1px solid #444;
+            background-color: #3d3d3d;
+            color: white;
             box-sizing: border-box;
             text-align: center;
+            transition: border 0.3s;
+        }
+        input:focus {
+            outline: none;
+            border-color: #4CAF50;
         }
         .btn-group {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 12px;
         }
         button {
             padding: 12px;
-            font-size: 16px;
+            font-size: 15px;
             cursor: pointer;
             border: none;
-            border-radius: 5px;
-            font-weight: bold;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: transform 0.2s, opacity 0.2s;
         }
+        button:active { transform: scale(0.98); }
+
         #unlock-btn {
             background-color: #4CAF50;
             color: white;
         }
-        #unlock-btn:hover { background-color: #45a049; }
-        
         #guest-btn {
-            background-color: #555;
-            color: white;
+            background-color: #444;
+            color: #ccc;
         }
-        #guest-btn:hover { background-color: #777; }
+        #guest-btn:hover { background-color: #555; color: white; }
 
         #error-msg {
             color: #ff5252;
             display: none;
             margin-top: 15px;
+            font-size: 14px;
         }
+
+        /* --- UI FOOTER CREDIT MENARIK --- */
+        .footer-credit {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #3d3d3d;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .author-badge {
+            background: linear-gradient(135deg, #2196F3, #0D47A1);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .repo-box {
+            background-color: #1e1e1e;
+            padding: 10px;
+            border-radius: 8px;
+            width: 100%;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 10px;
+            color: #888;
+            border: 1px dashed #444;
+            word-break: break-all;
+            user-select: all;
+        }
+
+        .repo-label {
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #555;
+            margin-bottom: 4px;
+            display: block;
+        }
+        /* -------------------------------- */
+
         #guest-instruction {
             display: none;
             margin-top: 20px;
@@ -71,7 +126,7 @@
             background-color: #3d3d3d;
             border-left: 4px solid #2196F3;
             border-radius: 4px;
-            font-size: 14px;
+            font-size: 13px;
             text-align: left;
             line-height: 1.6;
         }
@@ -79,23 +134,35 @@
 </head>
 <body>
     <div class="container">
-        <h2 style="margin-top: 0;">Profil Terkunci</h2>
-        <p style="color: #bbb; margin-bottom: 20px;">Silakan masukkan kunci atau gunakan Mode Tamu.</p>
+        <h2 style="margin: 0 0 10px 0;">DIKUNCI</h2>
+        <p style="color: #888; font-size: 14px; margin-bottom: 25px;">Profil Chrome ini dikunci, masukkan sandi untuk melanjutkan atau mohon masuk sebagai 'user tamu' jangan menggunakan profil chrome ini. Terima Kasih.</p>
         
-        <input type="password" id="password-input" placeholder="Masukkan Sandi Profil">
+        <input type="password" id="password-input" placeholder="Sandi Profil">
         
         <div class="btn-group">
             <button id="unlock-btn">Buka Kunci</button>
             <button id="guest-btn">Login dengan User Tamu</button>
         </div>
 
-        <p id="error-msg">Sandi Salah!</p>
+        <p id="error-msg">⚠️ Sandi yang Anda masukkan salah!</p>
+
+        <div class="footer-credit">
+            <div class="author-badge">
+                Dibuat oleh: Darwin Kamarudin
+            </div>
+            <div style="width: 100%;">
+                <span class="repo-label">Source Code (GitHub)</span>
+                <div class="repo-box">
+                    https://github.com/winkamaru-gela/kunci-profil-chrome
+                </div>
+            </div>
+        </div>
         
         <div id="guest-instruction">
-            <strong>Cara menggunakan Mode Tamu:</strong><br>
-            1. Klik <b>Ikon Profil (Foto)</b> di pojok kanan atas browser.<br>
-            2. Klik menu <b>Tamu Guest (Buka Profil Tamu)</b>.<br>
-            3. Jendela Chrome baru yang bersih akan terbuka untuk Anda.
+            <strong style="color: #2196F3;">Cara Mode Tamu:</strong><br>
+            1. Klik <b>Ikon Foto Profil</b> di kanan atas.<br>
+            2. Pilih menu <b>Tamu (Guest)</b>.<br>
+            3. Jendela baru akan terbuka otomatis.
         </div>
     </div>
 
